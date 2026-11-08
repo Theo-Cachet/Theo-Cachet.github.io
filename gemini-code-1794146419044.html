@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Théo Cachet | AI Research Scientist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        code, pre { font-family: 'JetBrains Mono', monospace; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold text-lg text-white tracking-tight hover:text-brand-400 transition-colors">
+                Théo Cachet
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="flex items-center space-x-6 text-sm font-medium">
+                <button onclick="openCVModal()" class="text-slate-300 hover:text-white transition-colors flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    CV
+                </button>
+                <a href="https://scholar.google.com/citations?user=-5oOttMAAAAJ&hl=fr&oi=ao" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">
+                    Google Scholar
+                </a>
+                <a href="https://www.linkedin.com/in/theocachet" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">
+                    LinkedIn
+                </a>
+                <a href="mailto:theo.cachet@gmail.com" class="text-slate-400 hover:text-white transition-colors">
+                    Contact
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-6 pt-12 pb-20 space-y-16 flex-grow">
+
+        <!-- Hero Section -->
+        <section class="space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs text-brand-400 font-mono">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Research Scientist @ Mistral AI
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                Théo Cachet
+            </h1>
+
+            <div class="prose prose-invert max-w-3xl text-slate-300 leading-relaxed space-y-4">
+                <p>
+                    I first heard about control theory and RL at Imperial College back in 2018, and fell in love with this field when applying this knowledge in programming competitions like Halite and Lux AI.
+                </p>
+                <p>
+                    This motivated me to do a <a href="https://theses.hal.science/tel-05238594/" target="_blank" class="text-brand-400 underline hover:text-brand-300 font-medium">PhD on task-level generalisation in RL</a> at NAVER LABS Europe and Sorbonne University. I focused on novel methods to specify task objectives to agents. This research led to two first-author ICML papers: 
+                    <a href="https://icml.cc/virtual/2021/poster/9398" target="_blank" class="text-brand-400 underline hover:text-brand-300 font-medium">one on demonstration-conditioned manipulation policies</a>, and 
+                    <a href="https://europe.naverlabs.com/research/publications/bridging-environments-and-language-with-rendering-functions-and-vision-language-models/" target="_blank" class="text-brand-400 underline hover:text-brand-300 font-medium">one on a retrieval-based alternative to VLAs</a>, yielding much better generalisation to novel instructions.
+                </p>
+                <p>
+                    I joined Mistral AI a year ago, and led research on <strong class="text-white">Robostral Navigate</strong>, a SoTA navigation system. I got my hands dirty in the whole stack spanning VLM/VLA architectures, synthetic data pipelines, evaluations, and multi-robot deployment.
+                </p>
+            </div>
+        </section>
+
+        <!-- Uniform Key Research Works Section -->
+        <section class="space-y-8 pt-6 border-t border-slate-800/80">
+            <h2 class="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                Key Research Works
+            </h2>
+
+            <div class="space-y-6">
+
+                <!-- Work 1: Robostral Navigate -->
+                <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <a href="https://youtu.be/7dpLB9NoY1A" target="_blank" rel="noopener noreferrer" class="group relative w-full md:w-1/2 aspect-video rounded-lg overflow-hidden bg-slate-950 border border-slate-800 flex-shrink-0">
+                            <img src="https://img.youtube.com/vi/7dpLB9NoY1A/maxresdefault.jpg" alt="Robostral Navigate Demo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                            <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/20 transition-colors flex items-center justify-center">
+                                <div class="w-12 h-12 rounded-full bg-brand-500/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                            </div>
+                            <span class="absolute bottom-2 right-2 text-[10px] bg-slate-900/90 px-2 py-0.5 rounded text-slate-300 font-mono">Watch Demo Video ↗</span>
+                        </a>
+
+                        <div class="w-full md:w-1/2 space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-mono text-brand-400 bg-brand-950/60 border border-brand-900/80 px-2 py-0.5 rounded">Mistral AI (2026)</span>
+                                <span class="text-xs font-mono text-slate-500">Technical Report</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white leading-snug">Robostral Navigate: Vision-Language Navigation via Dual System Architecture</h3>
+                            <p class="text-xs text-slate-400"><strong class="text-slate-200">Théo Cachet</strong> et al.</p>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                A vision-language navigation dual system deployed on real robots across diverse embodiments, achieving SoTA performance on R2R and RXR benchmarks.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-2">
+                                <a href="https://mistral.ai/news/robostral-navigate/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-medium transition-all">
+                                    Blog Post ↗
+                                </a>
+                                <a href="https://arxiv.org/abs/2607.20785" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-all">
+                                    Technical Report (arXiv) ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work 2: ICML 2024 -->
+                <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div class="w-full md:w-1/2 aspect-video rounded-lg overflow-hidden border border-slate-800 bg-slate-950 relative flex-shrink-0">
+                            <img src="https://europe.naverlabs.com/wp-content/uploads/2024/07/animation-naver.gif" alt="Text2Control Simulation GIF" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 right-2 text-[10px] bg-slate-900/90 px-2 py-0.5 rounded text-slate-300 font-mono">Interactive Demo Available</span>
+                        </div>
+
+                        <div class="w-full md:w-1/2 space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-mono text-brand-400 bg-brand-950/60 border border-brand-900/80 px-2 py-0.5 rounded">ICML 2024</span>
+                                <span class="text-xs font-mono text-slate-500">First Author</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white leading-snug">From Goal-Conditioned to Language-Conditioned Agents via Vision-Language Models</h3>
+                            <p class="text-xs text-slate-400"><strong class="text-slate-200">Théo Cachet</strong>, Christopher Dance, Olivier Sigaud</p>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Connecting simulator state representations with natural language using rendering functions and VLMs to build zero-shot language-conditioned agents.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-2">
+                                <a href="https://europe.naverlabs.com/research/publications/bridging-environments-and-language-with-rendering-functions-and-vision-language-models/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-medium transition-all">
+                                    Explore Interactive Demo & Paper ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work 3: ICML 2021 -->
+                <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <!-- ICML 2021 Slides Link Preview Card -->
+                        <a href="https://icml.cc/media/icml-2021/Slides/10007.pdf" target="_blank" rel="noopener noreferrer" class="group relative w-full md:w-1/2 aspect-video rounded-lg overflow-hidden bg-slate-950 border border-slate-800 flex flex-col justify-center items-center p-6 text-center flex-shrink-0 hover:border-slate-700 transition-all">
+                            <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950 group-hover:from-slate-850 group-hover:to-slate-900 transition-colors"></div>
+                            <div class="relative z-10 space-y-2">
+                                <svg class="w-10 h-10 text-brand-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                                <p class="text-sm font-bold text-white">ICML 2021 Slide Deck (PDF)</p>
+                                <p class="text-xs text-slate-400">View Slide 4: Task Formulation & Architecture</p>
+                            </div>
+                            <span class="absolute bottom-2 right-2 text-[10px] bg-slate-900/90 px-2 py-0.5 rounded text-slate-300 font-mono z-10">Open Slides PDF ↗</span>
+                        </a>
+
+                        <div class="w-full md:w-1/2 space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-mono text-brand-400 bg-brand-950/60 border border-brand-900/80 px-2 py-0.5 rounded">ICML 2021</span>
+                                <span class="text-xs font-mono text-slate-500">First Author</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white leading-snug">Demonstration-Conditioned Reinforcement Learning for Few-Shot Imitation</h3>
+                            <p class="text-xs text-slate-400"><strong class="text-slate-200">Théo Cachet</strong>, Christopher Dance, Julien Perez</p>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                A demonstration-conditioned RL method resulting in state-of-the-art few-shot imitation across unseen robotic manipulation tasks.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-2">
+                                <a href="https://icml.cc/virtual/2021/poster/9398" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-medium transition-all">
+                                    View Paper & Poster ↗
+                                </a>
+                                <a href="https://icml.cc/media/icml-2021/Slides/10007.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-all">
+                                    Slides PDF (Slide 4) ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-8">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+            <p>© 2026 Théo Cachet. All rights reserved.</p>
+            <p>Built for AI Research & Robotics.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Google Doc CV Modal -->
+    <div id="cvModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-4xl h-[85vh] flex flex-col overflow-hidden shadow-2xl">
+            <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+                <h3 class="text-white font-semibold">Curriculum Vitae — Théo Cachet</h3>
+                <div class="flex items-center gap-3">
+                    <a href="https://docs.google.com/document/d/1YyEqbOi9kc-EW-opqjqumfPhgjcptwJDS0UkkDERd4Q/edit" target="_blank" class="text-xs text-brand-400 hover:underline">Open in Google Docs ↗</a>
+                    <button onclick="closeCVModal()" class="text-slate-400 hover:text-white text-lg">✕</button>
+                </div>
+            </div>
+            <div class="flex-grow w-full bg-white">
+                <iframe src="https://docs.google.com/document/d/1YyEqbOi9kc-EW-opqjqumfPhgjcptwJDS0UkkDERd4Q/preview" class="w-full h-full border-none"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCVModal() {
+            document.getElementById('cvModal').classList.remove('hidden');
+        }
+        function closeCVModal() {
+            document.getElementById('cvModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

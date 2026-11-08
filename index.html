@@ -44,10 +44,13 @@
 
             <!-- Desktop Nav Links -->
             <nav class="flex items-center space-x-6 text-sm font-medium">
-                <button onclick="openCVModal()" class="text-slate-300 hover:text-white transition-colors flex items-center gap-1.5">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                <a href="./CV.pdf" target="_blank" rel="noopener noreferrer"
+                   class="text-slate-300 hover:text-white transition-colors flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2-2z"/>
+                    </svg>
                     CV
-                </button>
+                </a>
                 <a href="https://scholar.google.com/citations?user=-5oOttMAAAAJ&hl=fr&oi=ao" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">
                     Google Scholar
                 </a>
@@ -225,29 +228,6 @@
         </div>
     </footer>
 
-    <!-- Interactive Google Doc CV Modal -->
-    <div id="cvModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-800 rounded-xl w-full max-w-4xl h-[85vh] flex flex-col overflow-hidden shadow-2xl">
-            <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
-                <h3 class="text-white font-semibold">Curriculum Vitae — Théo Cachet</h3>
-                <div class="flex items-center gap-3">
-                    <a href="https://docs.google.com/document/d/1YyEqbOi9kc-EW-opqjqumfPhgjcptwJDS0UkkDERd4Q/edit" target="_blank" class="text-xs text-brand-400 hover:underline">Open in Google Docs ↗</a>
-                    <button onclick="closeCVModal()" class="text-slate-400 hover:text-white text-lg">✕</button>
-                </div>
-            </div>
-            <div class="flex-grow w-full bg-white">
-                <iframe src="https://docs.google.com/document/d/1YyEqbOi9kc-EW-opqjqumfPhgjcptwJDS0UkkDERd4Q/preview" class="w-full h-full border-none"></iframe>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        function openCVModal() {
-            document.getElementById('cvModal').classList.remove('hidden');
-        }
-        function closeCVModal() {
-            document.getElementById('cvModal').classList.add('hidden');
-        }
-    </script>
 </body>
 </html>

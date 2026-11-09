@@ -116,15 +116,52 @@
                 <!-- Work 1: Robostral Navigate -->
                 <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
                     <div class="flex flex-col md:flex-row gap-6 items-start">
-                        <a href="https://youtu.be/7dpLB9NoY1A" target="_blank" rel="noopener noreferrer" class="group relative w-full md:w-1/2 aspect-video rounded-lg overflow-hidden bg-slate-950 border border-slate-800 flex-shrink-0">
-                            <img src="https://img.youtube.com/vi/7dpLB9NoY1A/maxresdefault.jpg" alt="Robostral Navigate Demo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
-                            <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/20 transition-colors flex items-center justify-center">
-                                <div class="w-12 h-12 rounded-full bg-brand-500/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                                    <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                </div>
-                            </div>
-                            <span class="absolute bottom-2 right-2 text-[10px] bg-slate-900/90 px-2 py-0.5 rounded text-slate-300 font-mono">Watch Demo Video ↗</span>
-                        </a>
+
+
+                        <div class="group relative w-full md:w-1/2 aspect-video rounded-lg overflow-hidden bg-slate-950 border border-slate-800 flex-shrink-0" id="robostral-video">
+
+    <!-- Thumbnail -->
+    <img
+        src="https://img.youtube.com/vi/7dpLB9NoY1A/maxresdefault.jpg"
+        alt="Robostral Navigate Demo"
+        class="w-full h-full object-cover"
+        id="robostral-thumbnail"
+    >
+
+    <!-- Play button -->
+    <button
+        onclick="playRobostralVideo()"
+        class="absolute inset-0 bg-slate-950/40 hover:bg-slate-950/20 transition-colors flex items-center justify-center"
+        id="robostral-play">
+
+        <div class="w-12 h-12 rounded-full bg-brand-500/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+        </div>
+    </button>
+
+    <span class="absolute bottom-2 right-2 text-[10px] bg-slate-900/90 px-2 py-0.5 rounded text-slate-300 font-mono pointer-events-none" id="robostral-label">
+        Watch Demo Video
+    </span>
+</div>
+
+<script>
+function playRobostralVideo() {
+    const container = document.getElementById('robostral-video');
+
+    container.innerHTML = `
+        <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/7dpLB9NoY1A?autoplay=1"
+            title="Robostral Navigate Demo"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+            allowfullscreen>
+        </iframe>
+    `;
+}
+</script>
 
                         <div class="w-full md:w-1/2 space-y-3">
                             <div class="flex items-center justify-between">
